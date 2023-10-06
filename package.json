@@ -5,6 +5,11 @@
 		"name": "Javier Caballero"
 	},
 	"description": "Proyecto para embarcarme en nodejs y mas",
+	"keywords": [
+		"freecodecamp",
+		"nodejs",
+		"express"
+	],
 	"dependencies": {
 		"express": "^4.14.0"
 	},
