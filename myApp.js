@@ -3,12 +3,12 @@ let express = require('express');
 let app = express();
 
 // MIDDLEWARE
-app.use("/public", express.static(__dirname + "/public"));
-
 app.use(function(req, res, next) {
   console.log(`${req.method} ${req.path} - ${req.ip}`);
   next();
 });
+
+app.use("/public", express.static(__dirname + "/public"));
 
 // ENDPOINTS
 app.get("/", function(req, res) {
