@@ -4,6 +4,7 @@
 	"author": {
 		"name": "Javier Caballero"
 	},
+	"description": "Proyecto para embarcarme en nodejs y mas",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
