@@ -1,5 +1,7 @@
 require('dotenv').config();
 let express = require('express');
+let bodyParser = require('body-parser');
+
 let app = express();
 
 // MIDDLEWARE
@@ -7,6 +9,8 @@ app.use(function(req, res, next) {
   console.log(`${req.method} ${req.path} - ${req.ip}`);
   next();
 });
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/public", express.static(__dirname + "/public"));
 
@@ -35,9 +39,14 @@ app.get("/:word/echo", function(req, res) {
   res.json({ echo: req.params.word });
 });
 
-app.route("/name").get(function(req, res) {
-  res.json({ name: `${req.query.first} ${req.query.last}` });
-});
+app.route("/name")
+  .get(function(req, res) {
+    res.json({ name: `${req.query.first} ${req.query.last}` });
+  })
+  .post(function(req, res) {
+    res.json({ name: `${req.body.first} ${req.body.last}` });
+  });
+
 
 
 
