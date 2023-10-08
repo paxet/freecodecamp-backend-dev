@@ -1,31 +1,28 @@
 {
-  "name": "fcc-learn-node-with-express",
-  "version": "0.1.0",
+  "name": "fcc-mongo-mongoose-challenges",
+  "version": "0.2.0",
   "author": {
     "name": "Javier Caballero"
   },
   "description": "Proyecto para embarcarme en nodejs y mas",
-  "keywords": [
-    "freecodecamp",
-    "nodejs",
-    "express"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^16.0.1",
-    "express": "^4.14.0",
-    "fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git",
-    "nodemon": "^3.0.1"
-  },
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.12.4",
+    "mongoose": "^5.11.15"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/paxet/freecodecamp-backend-dev"
-  }
+  },
+  "keywords": [
+    "node",
+    "mongoose",
+    "express"
+  ],
+  "license": "MIT"
 }
