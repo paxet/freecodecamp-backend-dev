@@ -7,7 +7,7 @@ const personSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
   },
   age: Number,
   favoriteFoods: [String],
